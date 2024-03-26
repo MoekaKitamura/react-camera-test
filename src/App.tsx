@@ -2,13 +2,13 @@ import React, { useRef } from "react";
 import "./App.css";
 
 const App = () => {
-  const imgRef = useRef(null);
-  const fileRef = useRef(null);
+  const imgRef: any = useRef(null);
+  const fileRef: any = useRef(null);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const file = fileRef.current.files[0];
-    const reader = new FileReader();
+    const reader: any = new FileReader();
     reader.onload = () => {
       fetch("api/Upload", {
         method: "POST",
